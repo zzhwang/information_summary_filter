@@ -1,6 +1,8 @@
 # information_summary_filter
 
 # 实现请求过滤封装
+# 基于hash算法的爬虫过滤请求组件
+
 1 MemoryFilter python内存去重
 2 RedisFilter  redis去重
 3 MySQLFilter  mysql去重
