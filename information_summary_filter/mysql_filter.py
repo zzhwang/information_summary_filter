@@ -7,6 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from . import BaseFiltet
 
 Base = declarative_base()
+Base.metadata.create_all(engine)
 
 # class Filter(Base):
 #
