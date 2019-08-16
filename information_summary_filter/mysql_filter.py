@@ -7,7 +7,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from . import BaseFiltet
 
 Base = declarative_base()
-Base.metadata.create_all(engine)
 
 # class Filter(Base):
 #
@@ -35,6 +34,7 @@ class MySQLFilter(BaseFiltet):
     def _get_storage(self):
         '''返回一个mysql连接对象'''
         engine = create_engine(self.mysql_url)
+        Base.metadata.create_all(engine)
         Session = sessionmaker(engine)
         return Session
 
